@@ -6,76 +6,146 @@
     <style>
         h1 {
             color: #000000;
-            font-family:Arial, Helvetica, sans-serif;
-            text-align:left;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
         }
 
         p {
             color: #e62828;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
         }
 
         div {
-            color:#062ba4;
-            font-family:Georgia, 'Times New Roman', Times, serif;
+            color: #062ba4;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
-
     </style>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <h1>Find the treasure by M Kartikeya Datta</h1>
-    <p>Click on the locations to search for treasure, beware the traps</p>
-    <p id = "locations">Number of locations checked is zero.</p>
-    <p id = "penalty">Penalty is zero.</p>
-    <p>Click for help.</p>
-    <p id = "help">Help report</p>
+    <p class ="bg-warning">Click on the locations to search for treasure, beware the traps</p>
+    <p id="locations">Number of locations checked is zero.</p>
+    <p id="penalty">Penalty is zero.</p>
+    <p class = "bg-primary" onclick="help()">Click for help.</p>
+    <p class = "bg-secondary" id="help">Help report</p>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R1C1" onclick="check(0)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R1C2" onclick="check(1)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R1C3" onclick="check(2)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R1C4" onclick="check(3)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R1C5" onclick="check(4)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R1C1" onclick="check(0)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R1C2" onclick="check(1)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R1C3" onclick="check(2)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R1C4" onclick="check(3)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R1C5" onclick="check(4)">
             </div>
             <br>
             <div class="col-sm">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R2C1" onclick="check(10)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R2C2" onclick="check(11)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R2C3" onclick="check(12)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R2C4" onclick="check(13)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R2C5" onclick="check(14)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R2C1" onclick="check(5)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R2C2" onclick="check(6)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R2C3" onclick="check(7)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R2C4" onclick="check(8)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R2C5" onclick="check(9)">
             </div>
             <br>
             <div class="col-sm">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R3C1" onclick="check(15)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R3C2" onclick="check(16)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R3C3" onclick="check(17)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R3C4" onclick="check(18)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R3C5" onclick="check(19)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R3C1" onclick="check(10)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R3C2" onclick="check(11)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R3C3" onclick="check(12)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R3C4" onclick="check(13)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R3C5" onclick="check(14)">
             </div>
             <br>
             <div class="col-sm">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R4C1" onclick="check(20)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R4C2" onclick="check(21)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R4C3" onclick="check(22)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R4C4" onclick="check(23)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R4C5" onclick="check(24)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R4C1" onclick="check(15)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R4C2" onclick="check(16)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R4C3" onclick="check(17)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R4C4" onclick="check(18)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R4C5" onclick="check(19)">
             </div>
             <br>
             <div class="col-sm">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R5C1" onclick="check(5)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R5C2" onclick="check(6)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R5C3" onclick="check(7)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R5C4" onclick="check(8)">
-                <img src="treasure map.jpg" alt="Treasures Location" width="100" height="100" id="R5C5" onclick="check(9)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R5C1" onclick="check(20)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R5C2" onclick="check(21)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R5C3" onclick="check(22)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R5C4" onclick="check(23)">
+                <img src="images/treasure map.jpg" alt="Treasures Location" style ="width: 100px; height: 100px;" id="R5C5" onclick="check(24)">
             </div>
         </div>
     </div>
+    <script>
+        let ids = [];
+        for (i = 0; i < 5; i++) {
+            for (j = 0; j < 5; j++) {
+                ids.push("R" + (i + 1) + "C" + (j + 1));
+            }
+            console.log(ids, "idcheck");
+            // document.write(ids);
+        }
 
+        let checkCount = 0;
+        let penalty = 0;
+        let lastCheck = 0;
+        let treasureLocation = 15;
+        let trapLocation = 18;
+        let gameOver = false;
+
+        function check(position) {
+            if (gameOver) {
+                return;
+            }
+            id = ids[position];
+            image = document.getElementById(id);
+            if (position == trapLocation) {
+                image.src = "images/treasure trap.jpg";
+                gameOver = true;
+                penalty -= 3;
+            }
+            else if (position == treasureLocation) {
+                image.src = "images/treasure.jpg";
+                gameOver = true;
+                penalty += 4;
+            }
+            else {
+                image.src = "images/pirate brahmi.jpg"
+            }
+
+            checkCount++;
+            penalty++;
+            document.getElementById("locations").innerHTML = "Number of locations checked is " + checkCount;
+            document.getElementById("penalty").innerHTML = "Penalty is " + penalty;
+            lastCheck = position;
+        }
+
+        function help(){
+            let row = Math.round(treasureLocation/5)
+            let col = treasureLocation%5
+            let lastCheckRowpos = Math.round(lastCheck/5)
+            let lastCheckColpos = lastCheck%5
+            let rowDiff = Math.abs(lastCheckRowpos-row)
+            let colDiff = Math.abs(lastCheckColpos-col)
+            let difference =  Math.abs(rowDiff-colDiff)
+            if((rowDiff == 0 || colDiff == 0) && difference == 1) {
+                document.getElementById("help").innerHTML = "Can smell it";
+            } 
+            else if (rowDiff + colDiff == 2) {
+                 document.getElementById("help").innerHTML = "Close Matie";
+            } 
+            else{
+                 document.getElementById("help").innerHTML = "Step Faster";
+            }
+            penalty +=2
+            document.getElementById("penalty").innerHTML = "Penalty is " + penalty;
+        }
+        
+    </script>
 </body>
 
 </html>
