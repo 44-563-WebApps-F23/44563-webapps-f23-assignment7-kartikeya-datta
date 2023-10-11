@@ -5,7 +5,7 @@
         <style>
             .flex-container {
             display: flex;  flex-direction:row;
-            background-color: red;
+            background-color: rgb(209, 111, 111);
         }
 
         .flex-container > div {  /*div children of the flex container*/
@@ -36,20 +36,20 @@
 
 <body>
     <h1>Kartikeya builds a merger</h1>
-		<div class="flex-container" id="target">
-		  <div>row item 1</div>   
-		  <div>row item 2</div>  
-		  <div>row item 3</div>  
+		<div class="flex-container rounded" id="target">
+		  <div class="bg-muted rounded">row item 1</div>   
+		  <div class="bg-muted rounded">row item 2</div>  
+		  <div class="bg-muted rounded">row item 3</div>  
 		</div>
         
         <input type = "text" id="input" value="Please enter your text here">
 	    <p> Press the button to create an new element to add element to the end of the container.</p>
-		<button onclick="addedelement()">Add end</button>
+		<button onclick="addatend()">Add end</button>
 	
 	
 </body>
 <script>
-    function addedelement(){
+    function addatend(){
         display = document.createElement("div");
 		display.innerHTML = document.getElementById("input").value;
 		display.className = "merger";
