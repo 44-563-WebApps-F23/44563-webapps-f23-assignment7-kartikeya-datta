@@ -41,20 +41,40 @@
 		  <div class="bg-muted rounded">row item 2</div>  
 		  <div class="bg-muted rounded">row item 3</div>  
 		</div>
-        
-        <input type = "text" id="input" value="Please enter your text here">
-	    <p> Press the button to create an new element to add element to the end of the container.</p>
-		<button onclick="addatend()">Add end</button>
-	
+        <br>
+        <input type = "text" id="input" placeholder="please enter your value">
+        <br><br>
+        <div>
+		<button class ="btn btn-primary" onclick="addatend()">Add end</button>
+        <button class ="btn btn-primary" onclick="addatfront()">Add front</button>
+        <button class ="btn btn-primary" onclick="remove()">Remove</button>
+        </div>
 	
 </body>
 <script>
     function addatend(){
-        display = document.createElement("div");
+        let display = document.createElement("div");
 		display.innerHTML = document.getElementById("input").value;
 		display.className = "merger";
         let container = document.getElementById("target");
-        container.appendChild(element);
+        container.appendChild(display);
+    }
+
+    function remove(){
+        mergerItems = document.getElementsByClassName("merger");
+        length = mergerItems.length;
+        if (length > 0){
+            middle=Math.floor(length/2);
+            mergerItems[middle].remove();
+        }
+    }
+
+    function addatfront(){
+        let display = document.createElement("div");
+		display.innerHTML = document.getElementById("input").value;
+		display.className = "merger";
+        let container = document.getElementById("target");
+        container.insertBefore(display, container.firstChild);
     }
 	// function makeNewDiv(){
 	// 	/* make the div and its text */
