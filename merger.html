@@ -20,6 +20,16 @@
                 background-color: green;
             }
             }
+
+            #inputBlock {
+        width: 95%;
+        height: 120px;
+        padding: 10px;
+        margin: 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
         </style>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,23 +46,22 @@
 
 <body>
     <h1>Kartikeya builds a merger</h1>
-		<div class="flex-container rounded" id="target">
-		  <div class="bg-muted rounded">row item 1</div>   
-		  <div class="bg-muted rounded">row item 2</div>  
-		  <div class="bg-muted rounded">row item 3</div>  
+    <div  id="inputBlock">
+		<div class="flex-container rounded"  id="target">
 		</div>
+    </div>
         <br>
         <input type = "text" id="input" placeholder="please enter your value">
         <br><br>
         <div>
-		<button class ="btn btn-primary" onclick="addatend()">Add end</button>
-        <button class ="btn btn-primary" onclick="addatfront()">Add front</button>
+		<button class ="btn btn-primary" onclick="addEnd()">Add end</button>
+        <button class ="btn btn-primary" onclick="addFront()">Add front</button>
         <button class ="btn btn-primary" onclick="remove()">Remove</button>
         </div>
 	
 </body>
 <script>
-    function addatend(){
+    function addEnd(){
         let display = document.createElement("div");
 		display.innerHTML = document.getElementById("input").value;
 		display.className = "merger";
@@ -63,13 +72,13 @@
     function remove(){
         mergerItems = document.getElementsByClassName("merger");
         length = mergerItems.length;
-        if (length > 0){
-            middle=Math.floor(length/2);
-            mergerItems[middle].remove();
+        console.log(length)
+        if (length > 0){ 
+            mergerItems[Math.floor(length/2)].remove();
         }
     }
 
-    function addatfront(){
+    function addFront(){
         let display = document.createElement("div");
 		display.innerHTML = document.getElementById("input").value;
 		display.className = "merger";
