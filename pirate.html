@@ -103,8 +103,8 @@
         let checkCount = 0;
         let penalty = 0;
         let lastCheck = 0;
-        let treasureLocation = 15;
-        let trapLocation = 18;
+        let treasureLocation =  Math.floor(Math.random() * 25);
+        let trapLocation =  Math.floor(Math.random() * 25);
         let gameOver = false;
 
         function check(position) {
@@ -122,6 +122,9 @@
                 image.src = "images/treasure.jpg";
                 gameOver = true;
                 penalty += 4;
+            }
+            else if (trapLocation === treasureLocation){
+                trapLocation = Math.floor(Math.random() * 25);
             }
             else {
                 image.src = "images/pirate brahmi.jpg";
