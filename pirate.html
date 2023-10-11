@@ -90,6 +90,7 @@
 
         </div>
     </div>
+    <button id="resetButton" onclick="resetGame()">New Game</button>
     <script>
         let ids = [];
         for (i = 0; i < 5; i++) {
@@ -157,7 +158,29 @@
             penalty +=2
             document.getElementById("penalty").innerHTML = "Penalty is " + penalty;
         }
-        
+
+        function resetGame() {
+            let checkCount = 0;
+            let penalty = 0;
+            let lastCheck = 0;
+            let treasureLocation =  Math.floor(Math.random() * 25);
+            let trapLocation =  Math.floor(Math.random() * 25);
+            let gameOver = false;
+
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
+                    const id = "R" + (i + 1) + "C" + (j + 1);
+                    const image = document.getElementById(id);
+                    image.src = "images/treasure map.jpg";
+                }
+            }
+            document.getElementById("help").innerHTML = "Help report";
+            document.getElementById("locations").innerHTML = "Number of locations checked is " + checkCount;
+            document.getElementById("penalty").innerHTML = "Penalty is " + penalty;
+        }
+
+        id_location.innerHTML = `Number of locations checked is  ${checkCount}`;
+        id_penalty.innerHTML = `Penalty is ${penalty}`;
     </script>
 </body>
 
