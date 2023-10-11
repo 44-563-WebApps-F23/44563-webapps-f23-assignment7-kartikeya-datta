@@ -2,8 +2,8 @@
 # WebApps-F23-Assignment-7
 An assignment on java script modifying the DOM and using anonymous callback functions.
 <br>
-Pirate file: file:///C:/Study/Web-Apps/webapps-repos/44563-webapps-f23-assignment7-kartikeya-datta/pirate.html
+[Pirate file](file:///C:/Study/Web-Apps/webapps-repos/44563-webapps-f23-assignment7-kartikeya-datta/pirate.html)
 <br>
-React file: file:///C:/Study/Web-Apps/webapps-repos/44563-webapps-f23-assignment7-kartikeya-datta/react.html
+[React file](file:///C:/Study/Web-Apps/webapps-repos/44563-webapps-f23-assignment7-kartikeya-datta/react.html)
 <br>
-Merge file: file:///C:/Study/Web-Apps/webapps-repos/44563-webapps-f23-assignment7-kartikeya-datta/merger.html
+[Merge file](file:///C:/Study/Web-Apps/webapps-repos/44563-webapps-f23-assignment7-kartikeya-datta/merger.html)
